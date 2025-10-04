@@ -40,7 +40,7 @@ def submit():
             app.logger.error("Supabase insert error: %s", error)
             flash("Failed to save to database. Check server logs.")
         else:
-            return {"message": "Saved successfully!"}
+            flash("Saved successfully!")
     except Exception as e:
         app.logger.exception("Unexpected error inserting to Supabase")
         flash("Unexpected error. See server logs.")
